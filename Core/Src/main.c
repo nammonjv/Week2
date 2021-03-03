@@ -270,7 +270,6 @@ uint16_t ButtonMatrixPin[8]=
 uint16_t Collect[12]={0,0,0,0,0,0,0,0,0,0,0,0};
 uint16_t Result[12]={64,512,1024,16,4096,32,4096,4096,4096,4096,16,0};
 int pointer = 0;
-int test = 0;
 int check = 0;
 uint8_t ButtonMatrixRow =0;
 void ButtonMatrixUpdate()
@@ -301,12 +300,10 @@ void ButtonMatrixUpdate()
 					if(check==12)
 					{
 						HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
-						test = 1;
 					}
 					else
 					{
 						HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
-						test = 2;
 					}
 					for(i=0;i<12;++i)
 					{Collect[i]=0;}
@@ -315,6 +312,7 @@ void ButtonMatrixUpdate()
 				else if(ButtonMatrixState == 128)
 				{
 					pointer-=1;
+					Collect[pointer] = 0;
 				}
 				else if(pointer<11)
 				{
