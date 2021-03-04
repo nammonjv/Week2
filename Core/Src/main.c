@@ -55,7 +55,10 @@ static void MX_USART2_UART_Init(void);
 //Scan update data of button
 uint32_t ButtonMatrixTimestamp = 0;
 void ButtonMatrixUpdate();
-
+uint16_t Collect[12]={0};
+uint16_t Result[12]={64,512,1024,16,4096,32,4096,4096,4096,4096,16,0};
+int pointer = 0;
+int check = 0;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -267,10 +270,7 @@ GPIO_TypeDef* ButtonMatrixPort[8] =
 {GPIOA ,GPIOB, GPIOB, GPIOB, GPIOA, GPIOC, GPIOB, GPIOA};
 uint16_t ButtonMatrixPin[8]=
 {GPIO_PIN_10,GPIO_PIN_3,GPIO_PIN_5,GPIO_PIN_4,GPIO_PIN_9,GPIO_PIN_7,GPIO_PIN_6,GPIO_PIN_7};
-uint16_t Collect[12]={0,0,0,0,0,0,0,0,0,0,0,0};
-uint16_t Result[12]={64,512,1024,16,4096,32,4096,4096,4096,4096,16,0};
-int pointer = 0;
-int check = 0;
+
 uint8_t ButtonMatrixRow =0;
 void ButtonMatrixUpdate()
 {

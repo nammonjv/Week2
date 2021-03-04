@@ -2690,14 +2690,14 @@ LOAD c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x0000000020000000                _sdata = .
  *(.data)
  *(.data*)
+ .data.Result   0x0000000020000000       0x18 Core/Src/main.o
+                0x0000000020000000                Result
  .data.ButtonMatrixPort
-                0x0000000020000000       0x20 Core/Src/main.o
-                0x0000000020000000                ButtonMatrixPort
+                0x0000000020000018       0x20 Core/Src/main.o
+                0x0000000020000018                ButtonMatrixPort
  .data.ButtonMatrixPin
-                0x0000000020000020       0x10 Core/Src/main.o
-                0x0000000020000020                ButtonMatrixPin
- .data.Result   0x0000000020000030       0x18 Core/Src/main.o
-                0x0000000020000030                Result
+                0x0000000020000038       0x10 Core/Src/main.o
+                0x0000000020000038                ButtonMatrixPin
  .data.SystemCoreClock
                 0x0000000020000048        0x4 Core/Src/system_stm32f4xx.o
                 0x0000000020000048                SystemCoreClock
@@ -2806,17 +2806,17 @@ LOAD c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x0000000000000358       0x22 c:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(Week2.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0x5774
- .debug_info    0x0000000000000000      0xcb5 Core/Src/main.o
- .debug_info    0x0000000000000cb5      0x963 Core/Src/stm32f4xx_hal_msp.o
- .debug_info    0x0000000000001618      0x20a Core/Src/stm32f4xx_it.o
- .debug_info    0x0000000000001822      0x57e Core/Src/system_stm32f4xx.o
- .debug_info    0x0000000000001da0       0x22 Core/Startup/startup_stm32f411retx.o
- .debug_info    0x0000000000001dc2      0x8d5 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_info    0x0000000000002697      0xd98 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_info    0x000000000000342f      0x7d7 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_info    0x0000000000003c06      0x92a Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_info    0x0000000000004530     0x1244 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+.debug_info     0x0000000000000000     0x5770
+ .debug_info    0x0000000000000000      0xcb1 Core/Src/main.o
+ .debug_info    0x0000000000000cb1      0x963 Core/Src/stm32f4xx_hal_msp.o
+ .debug_info    0x0000000000001614      0x20a Core/Src/stm32f4xx_it.o
+ .debug_info    0x000000000000181e      0x57e Core/Src/system_stm32f4xx.o
+ .debug_info    0x0000000000001d9c       0x22 Core/Startup/startup_stm32f411retx.o
+ .debug_info    0x0000000000001dbe      0x8d5 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_info    0x0000000000002693      0xd98 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_info    0x000000000000342b      0x7d7 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_info    0x0000000000003c02      0x92a Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_info    0x000000000000452c     0x1244 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
 
 .debug_abbrev   0x0000000000000000     0x1117
  .debug_abbrev  0x0000000000000000      0x23d Core/Src/main.o
